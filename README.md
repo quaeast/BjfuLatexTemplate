@@ -14,6 +14,11 @@
 
 ## Quick Start
 
+```bash
+# 渲染
+./make.sh
+```
+
 ## Texlive配置指南
 
 ## FAQ
