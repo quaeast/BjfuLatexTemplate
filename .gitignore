@@ -1,3 +1,5 @@
+.DS_Store
+
 missfont.log
 *.aux
 *.bbl
@@ -7,3 +9,8 @@ missfont.log
 *.pdf
 *.synctex.gz
 *.toc
+*.fls
+*.fdb_latexmk
+_minted*
+*.xdv
+*.synctex(busy)
