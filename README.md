@@ -15,8 +15,13 @@
 ## Quick Start
 
 ```bash
+cd template
 # 渲染
 ./make.sh
+# 清理
+./clean.sh
+# 字数统计
+detex main.tex | wc -w
 ```
 
 ## Texlive配置指南
