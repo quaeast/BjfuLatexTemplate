@@ -21,7 +21,7 @@ cd template
 # 清理
 ./clean.sh
 # 字数统计
-detex main.tex | wc -w
+texcount *.tex 
 ```
 
 ## Texlive配置指南
