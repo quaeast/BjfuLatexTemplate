@@ -199,7 +199,7 @@
     
     \zihao{3} \CJKfamily{zhsong} \textbf{\bjfuTitleString} \\
     \hline
-    \zihao{4} \bjfuTitleEnString \\
+    \zihao{4} \textbf{\bjfuTitleEnString} \\
     \hline
 \end{tabular}
 
@@ -215,17 +215,17 @@
 
 % 信息
 \begin{tabular}{rC{0.6\textwidth}}
-    \zihao{4} 学\ \ \ \ \ \ \ \ 院 & \zihao{4} \bjfuCollegeString
+    \zihao{4} \CJKfamily{zhsong} \textbf{学\ \ \ \ \ \ \ \ 院} & \zihao{4} \CJKfamily{zhsong} \bjfuCollegeString
     \\\cline{2-2}
-    \zihao{4} 专\ \ \ \ \ \ \ \ 业 & \zihao{4} \bjfuMajorString
+    \zihao{4} \CJKfamily{zhsong} \textbf{专\ \ \ \ \ \ \ \ 业} & \zihao{4} \CJKfamily{zhsong} \bjfuMajorString
     \\\cline{2-2}
-    \zihao{4} 指导教师 & \zihao{4} \bjfuSupervisorString\ \ \ \ \bjfuSupervisorTitleString
+    \zihao{4} \CJKfamily{zhsong} \textbf{指导教师} & \zihao{4} \CJKfamily{zhsong} \bjfuSupervisorString\ \ \ \ \bjfuSupervisorTitleString
     \\\cline{2-2}
 \end{tabular}
 
 \vspace{40pt}
 
-\zihao{4} 2021年5月1日
+\zihao{4} \CJKfamily{zhsong}{2021年 5月 1日}
 
 \renewcommand\arraystretch{1}
 \end{center}
