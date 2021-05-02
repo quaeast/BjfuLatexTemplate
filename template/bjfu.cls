@@ -66,18 +66,21 @@
 %页码位于页面底端居中
 \renewcommand{\footnotesize}{\zihao{-5}}  
 
+
+%表格注释标注
+\def\TPTnoteLabel#1{\zihao{-6}\CJKfamily{zhsong}\textbf{注#1:}}
 %用于表格注释 六号宋体
-\renewcommand{\tiny}{\zihao{-6}}  
+\renewcommand{\tiny}{\zihao{-6}\CJKfamily{zhsong}}  
 
 %论文中出现的所有数字和字母如无特殊要求都用Times New Roman体。
 %设置正文非汉字的字体为Times New Roman
 \setmainfont{Times New Roman}
 
-%设置英文图为Fig，表格为Tab
-\DeclareCaptionOption{english}[]{
-\renewcommand\figurename{Fig.}
-\renewcommand\tablename{Tab}}
-\captionsetup[bi-second]{english}
+% %设置英文图为Fig，表格为Tab
+% \DeclareCaptionOption{english}[]{
+% \renewcommand\figurename{Fig.}
+% \renewcommand\tablename{Tab}}
+% \captionsetup[bi-second]{english}
 
 %一定要在这里声明space，直接声明不好使，小五号
 \captionsetup{font={footnotesize,bf},labelsep=space}
@@ -109,6 +112,8 @@
 \renewcommand{\sectionautorefname}{章}
 \renewcommand{\subsectionautorefname}{节}
 \renewcommand{\subsubsectionautorefname}{条}
+
+
 
 %章标题：四号宋体加粗
 %section另起一页，宋体四号加粗居中
