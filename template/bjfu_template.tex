@@ -45,6 +45,7 @@ In Beijing Forestry University, bachelor thesis have to meet some requirements. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 \makeBjfuTitlePage
+
 \section{快速开始}
 快速开始 \cite{刘海洋2013LATEX}
 
@@ -57,21 +58,12 @@ In Beijing Forestry University, bachelor thesis have to meet some requirements. 
 \subsubsection{快速快速开始}
 
 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+
 图片的插入方法的界如图\ref{Fig:test}所示
 \begin{figure}[htbp] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
     \centering %图片居中
     \includegraphics[width=0.3\textwidth]{images/test.png} %插入图片，[]中设置图片大小，{}中是图片文件名
-
-    %中文标题begin
-    \renewcommand{\figurename}{图}
-    \caption{测试图片} %中文名
-    %中文标题end
-    \addtocounter{figure}{-1}
-    \vspace{-5pt}
-    %英文标题begin
-    \renewcommand{\figurename}{Fig}
-    \caption{Test picture} %英文名，注意仅首字母和专有名词大写
-    %英文标题end
+    \bjfuFigureCaption{测试图片}{Test Picture} % 第一个参数为中文名，第二个参数为英文名
     \label{Fig:test} %用于文内引用的标签
 \end{figure}
 
@@ -79,16 +71,7 @@ In Beijing Forestry University, bachelor thesis have to meet some requirements. 
 
 表格的插入方法的界如表\ref{Fig:test}所示
 \begin{table}[h]  %table 里面也可以嵌套tabular,只有tabular是不能加标题的
-    %中文标题begin
-    \renewcommand{\tablename}{表}
-    \caption{测试表格} %中文名
-    %中文标题end
-    \addtocounter{table}{-1}
-    \vspace{-5pt}
-    %英文标题begin
-    \renewcommand{\tablename}{Table.}
-    \caption{Test Table} %英文名，注意仅首字母和专有名词大写
-    %英文标题end
+    \bjfuTableCaption{测试表格}{Test Table}
     \renewcommand\arraystretch{1.5}
     \centering  %表格居中
     \setlength{\tabcolsep}{7mm}{

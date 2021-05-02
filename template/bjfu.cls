@@ -76,12 +76,6 @@
 %设置正文非汉字的字体为Times New Roman
 \setmainfont{Times New Roman}
 
-% %设置英文图为Fig，表格为Tab
-% \DeclareCaptionOption{english}[]{
-% \renewcommand\figurename{Fig.}
-% \renewcommand\tablename{Tab}}
-% \captionsetup[bi-second]{english}
-
 %一定要在这里声明space，直接声明不好使，小五号
 \captionsetup{font={footnotesize,bf},labelsep=space}
 
@@ -185,6 +179,34 @@
 \newcommand{\bjfuMajor}[1]{\def\bjfuMajorString{#1}}
 % 学号
 \newcommand{\bjfuId}[1]{\def\bjfuIdString{#1}}
+
+% 图注
+\newcommand{\bjfuFigureCaption}[2]{
+    %中文标题begin
+    \renewcommand{\figurename}{图}
+    \caption{#1} %中文名
+    %中文标题end
+    \addtocounter{figure}{-1}
+    \vspace{-5pt}
+    %英文标题begin
+    \renewcommand{\figurename}{Fig}
+    \caption{#2} %英文名，注意仅首字母和专有名词大写
+    %英文标题end
+}
+
+% 表注
+\newcommand{\bjfuTableCaption}[2]{
+    %中文标题begin
+    \renewcommand{\tablename}{表}
+    \caption{#1} %中文名
+    %中文标题end
+    \addtocounter{table}{-1}
+    \vspace{-5pt}
+    %英文标题begin
+    \renewcommand{\tablename}{Table.}
+    \caption{#2} %英文名，注意仅首字母和专有名词大写
+    %英文标题end
+}
 
 \newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 
