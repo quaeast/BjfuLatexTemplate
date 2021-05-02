@@ -1,1 +1,2 @@
-latexmk -xelatex --shell-escape
+latexmk -xelatex --shell-escape 
+latexmk -c

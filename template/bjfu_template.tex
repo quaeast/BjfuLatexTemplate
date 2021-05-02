@@ -56,9 +56,68 @@ In Beijing Forestry University, bachelor thesis have to meet some requirements. 
 
 \subsubsection{快速快速开始}
 
-内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+图片的插入方法的界如图\ref{Fig:test}所示
+\begin{figure}[htbp] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形
+    \centering %图片居中
+    \includegraphics[width=0.3\textwidth]{images/test.png} %插入图片，[]中设置图片大小，{}中是图片文件名
+
+    %中文标题begin
+    \renewcommand{\figurename}{图}
+    \caption{测试图片} %中文名
+    %中文标题end
+    \addtocounter{figure}{-1}
+    \vspace{-5pt}
+    %英文标题begin
+    \renewcommand{\figurename}{Fig}
+    \caption{Test picture} %英文名，注意仅首字母和专有名词大写
+    %英文标题end
+    \label{Fig:test} %用于文内引用的标签
+\end{figure}
 
 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+
+表格的插入方法的界如表\ref{Fig:test}所示
+\begin{table}[h]  %table 里面也可以嵌套tabular,只有tabular是不能加标题的
+    %中文标题begin
+    \renewcommand{\tablename}{表}
+    \caption{测试表格} %中文名
+    %中文标题end
+    \addtocounter{table}{-1}
+    \vspace{-5pt}
+    %英文标题begin
+    \renewcommand{\tablename}{Table.}
+    \caption{Test Table} %英文名，注意仅首字母和专有名词大写
+    %英文标题end
+    \renewcommand\arraystretch{1.5}
+    \centering  %表格居中
+    \setlength{\tabcolsep}{7mm}{
+        \begin{threeparttable}
+        \begin{tabular}{c|c|c|c}  %按列居中对齐，并在中间划线 左右中分别用字母l,r,c表示
+            \hline
+            列名\tnote{1} & 类型\tnote{2} & 默认值 & 注释 \\ [0.5ex]  %增加行宽
+            \hline
+            id & int & Auto Inc &  用户id，主键 \\
+            \hline
+            name & text &  & 昵称 \\
+            \hline
+            phone & char(11) & - & 手机号 \\
+            \hline
+            avatar & text & - & 头像地址 \\
+            \hline
+        \end{tabular}
+        %% 注释开始
+        \begin{tablenotes}
+            \tiny
+            \item 无编号注释。     
+            \item[1] 列名的注释。 %根据编号使用\tnote{编号}引用
+            \item[2] 表名的注释。
+        \end{tablenotes}       
+        %% 注释结束    
+        \end{threeparttable}
+    }
+    \label{Table:test} %用于文内引用的标签
+\end{table}
 
 \subsection{代码}
 

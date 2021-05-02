@@ -39,6 +39,8 @@
 \RequirePackage{minted}
 %设置列表格式
 \RequirePackage{enumitem}
+
+\RequirePackage{threeparttable}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage[sort&compress]{gbt7714}
 %论文一律编排并打印在A4幅面白纸上
@@ -64,6 +66,9 @@
 %页码位于页面底端居中
 \renewcommand{\footnotesize}{\zihao{-5}}  
 
+%用于表格注释 六号宋体
+\renewcommand{\tiny}{\zihao{-6}}  
+
 %论文中出现的所有数字和字母如无特殊要求都用Times New Roman体。
 %设置正文非汉字的字体为Times New Roman
 \setmainfont{Times New Roman}
@@ -79,11 +84,15 @@
 
 %设置图片编号随着章节自动清零
 \numberwithin{figure}{section}
+%设置表格编号随着章节自动清零
+\numberwithin{table}{section}
 %设置公式编号随着章节自动清零
 \numberwithin{equation}{section}
 
 %定义图的编号为章节号码.序号
 \renewcommand{\thefigure}{\thesection.\arabic{figure}}
+%定义表的编号为章节号码.序号
+\renewcommand{\thetable}{\thesection.\arabic{table}}
 %定义公式的编号为章节号码.序号
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
 %定义条的编号为序号
@@ -251,8 +260,8 @@
 \zihao{-4}\CJKfamily{zhsong}指导老师\ \bjfuSupervisorString \\
 
 %“摘要”字样用四号宋体加粗居中
-
 \zihao{4}\CJKfamily{zhsong}\textbf{摘要}
+
 \end{center}
 
 %摘要正文用楷体五号
