@@ -41,11 +41,13 @@
 \RequirePackage{enumitem}
 
 \RequirePackage{threeparttable}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage[sort&compress]{gbt7714}
 %论文一律编排并打印在A4幅面白纸上
 %上边距为25mm，下边距为25mm，左边距为30mm，右边距为20mm
 \geometry{a4paper,left=30mm,right=20mm,top=25mm,bottom=25mm}
+
 
 %论文行间距为1.5倍（可能需要用\selectfont）
 \linespread{1.8}
@@ -53,7 +55,7 @@
 %页眉页脚开启
 \pagestyle{fancy}
 %页眉字号字体为小五号宋体，内容为“北京林业大学本科毕业论文(设计)”
-\chead{\zihao{-5}\CJKfamily{zhsong}北京林业大学本科毕业论文(设计) } 
+\chead{\zihao{-5}\CJKfamily{zhsong}北京林业大学本科毕业论文（设计） } 
 %页眉只有中间有内容，左右为空白
 \lhead{} 
 \rhead{}
@@ -94,9 +96,14 @@
 \renewcommand{\theequation}{\thesection.\arabic{equation}}
 %定义条的编号为序号
 % \renewcommand{\thesubsubsection}{\arabic{subsubsection}}
+
 \CTEXoptions[contentsname={\zihao{3} \CJKfamily{zhhei} \centering 目录}]
+% \ctexset { contentsname={\zihao {3} \CJKfamily {zhhei} \centering 目录} }
+
 
 \CTEXoptions[bibname={\zihao{4} \centering 参考文献 \vspace{14pt}}]
+% \ctexset { bibname={\zihao {4} \centering 参考文献 \vspace{14pt}} } 
+
 
 %改变figure为图
 \renewcommand{\figureautorefname}{图}
@@ -112,14 +119,43 @@
 %章标题：四号宋体加粗
 %section另起一页，宋体四号加粗居中
 \CTEXsetup[beforeskip=7pt,afterskip=7pt,format={\newpage\centering\zihao{4}\CJKfamily{zhsong}\bfseries}]{section}
+% \ctexset { 
+%     section = { 
+%         beforeskip=7pt,
+%         afterskip=7pt,
+%         format={
+%             \newpage \centering \zihao {4} \CJKfamily {zhsong} \bfseries
+%         } 
+%     } 
+% }
 
 
 %节标题：小四号宋体加粗
 %subsection宋体小四号加粗
 \CTEXsetup[beforeskip=6pt,afterskip=6pt,format={\zihao{-4}\CJKfamily{zhsong}\bfseries}]{subsection}
 
+% \ctexset { 
+%     subsection = {
+%         beforeskip=6pt,
+%         afterskip=6pt,
+%         format={
+%             \zihao{-4} \CJKfamily {zhsong} \bfseries 
+%         } 
+%     } 
+% }
+
+
 %subsubsection宋体小四号加粗
 \CTEXsetup[beforeskip=5.25pt,afterskip=5.25pt,format={\zihao{5}\CJKfamily{zhsong}\bfseries}]{subsubsection}
+% \ctexset { 
+%     subsubsection = { 
+%         beforeskip=5.25pt,
+%         afterskip=5.25pt,
+%         format={
+%             \zihao{5} \CJKfamily {zhsong} \bfseries 
+%         } 
+%     } 
+% }
 
 
 \bibliographystyle{gbt7714-numerical}
@@ -208,118 +244,123 @@
     %英文标题end
 }
 
-\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+% 列表编号设置
+\renewcommand{\labelenumi}{（\theenumi）} % 一级为(1)
+\renewcommand{\theenumii}{\arabic{enumii}} % 二级也设置为数字
+\renewcommand{\labelenumii}{\large\protect\textcircled{\small{\theenumii}}} % 二级为圈1
 
+
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
 % 标题页
 \newcommand{\makeBjfuTitlePage}{
-%扉页，无header和footer
-%这一页的页边距和其他页面不一样，为上边距为25.4mm，下边距为25.4mm，左边距为31.75mm，右边距为31.75mm
-\newgeometry{left=31.75mm,right=31.75mm,top=25.4mm,bottom=25.4mm}
-\thispagestyle{empty}
-\begin{spacing}{1.5}
-\rightline{\zihao{4} \CJKfamily{zhhei}学校代码：10022}
+    %扉页，无header和footer
+    %这一页的页边距和其他页面不一样，为上边距为25.4mm，下边距为25.4mm，左边距为31.75mm，右边距为31.75mm
+    \newgeometry{left=31.75mm,right=31.75mm,top=25.4mm,bottom=25.4mm}
+    \thispagestyle{empty}
+    \begin{spacing}{1.5}
+    \rightline{\zihao{4} \CJKfamily{zhhei}学校代码：10022}
 
-\hspace{-8mm}\includegraphics[height=38mm]{files/bjfu_title.png} 
+    \hspace{-8mm}\includegraphics[height=38mm]{files/bjfu_title.png} 
 
-\begin{center}
-\zihao{0} \CJKfamily{zhkai} \textbf{本科毕业论文（设计）}
+    \begin{center}
+    \zihao{0} \CJKfamily{zhkai} \textbf{本科毕业论文（设计）}
 
-\vspace{-40pt}
+    \vspace{-40pt}
 
-% 中英文题目
-\renewcommand\arraystretch{0.6}
+    % 中英文题目
+    \renewcommand\arraystretch{0.6}
 
-\vspace{2cm}
+    \vspace{2cm}
 
-\begin{tabular}{C{\textwidth}}
-    
-    \zihao{3} \CJKfamily{zhsong} \textbf{\bjfuTitleString} \\
-    \hline
-    \zihao{4} \textbf{\bjfuTitleEnString} \\
-    \hline
-\end{tabular}
+    \begin{tabular}{C{\textwidth}}
+        
+        \zihao{3} \CJKfamily{zhsong} \textbf{\bjfuTitleString} \\
+        \hline
+        \zihao{4} \textbf{\bjfuTitleEnString} \\
+        \hline
+    \end{tabular}
 
-\vspace{40pt}
+    \vspace{40pt}
 
-% 作者
-\begin{tabular}{C{0.3\textwidth}}
-    \zihao{4} \CJKfamily{zhsong} \bjfuAuthorString
-    \\\hline
-\end{tabular}
+    % 作者
+    \begin{tabular}{C{0.3\textwidth}}
+        \zihao{4} \CJKfamily{zhsong} \bjfuAuthorString
+        \\\hline
+    \end{tabular}
 
-\vspace{40pt}
+    \vspace{40pt}
 
-% 信息
-\begin{tabular}{rC{0.6\textwidth}}
-    \zihao{4} \CJKfamily{zhsong} \textbf{学\ \ \ \ \ \ \ \ 院} & \zihao{4} \CJKfamily{zhsong} \bjfuCollegeString
-    \\\cline{2-2}
-    \zihao{4} \CJKfamily{zhsong} \textbf{专\ \ \ \ \ \ \ \ 业} & \zihao{4} \CJKfamily{zhsong} \bjfuMajorString
-    \\\cline{2-2}
-    \zihao{4} \CJKfamily{zhsong} \textbf{指导教师} & \zihao{4} \CJKfamily{zhsong} \bjfuSupervisorString\ \ \ \ \bjfuSupervisorTitleString
-    \\\cline{2-2}
-\end{tabular}
+    % 信息
+    \begin{tabular}{rC{0.6\textwidth}}
+        \zihao{4} \CJKfamily{zhsong} \textbf{学\ \ \ \ \ \ \ \ 院} & \zihao{4} \CJKfamily{zhsong} \bjfuCollegeString
+        \\\cline{2-2}
+        \zihao{4} \CJKfamily{zhsong} \textbf{专\ \ \ \ \ \ \ \ 业} & \zihao{4} \CJKfamily{zhsong} \bjfuMajorString
+        \\\cline{2-2}
+        \zihao{4} \CJKfamily{zhsong} \textbf{指导教师} & \zihao{4} \CJKfamily{zhsong} \bjfuSupervisorString\ \ \ \ \bjfuSupervisorTitleString
+        \\\cline{2-2}
+    \end{tabular}
 
-\vspace{40pt}
+    \vspace{40pt}
 
-\zihao{4} \CJKfamily{zhsong}{2021年 5月 1日}
+    \zihao{4} \CJKfamily{zhsong}{2021年 5月 1日}
 
-\renewcommand\arraystretch{1}
-\end{center}
-\end{spacing}
+    \renewcommand\arraystretch{1}
+    \end{center}
+    \end{spacing}
 
-\pagebreak
-%回复页边距和header、footer
-\restoregeometry
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%论文摘要和目录用罗马数字单独编页码。
-\pagenumbering{Roman}
-\begin{titlepage}
-\thispagestyle{fancy}
-%中文标题
-\begin{center}
-%论文题目用小三号黑体(中文)或者Times New Roman体(英文)
-%分行用双反斜线表示
-\zihao{-3}\CJKfamily{zhhei}\textbf{\bjfuTitleString}\\
+    \pagebreak
+    %回复页边距和header、footer
+    \restoregeometry
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %论文摘要和目录用罗马数字单独编页码。
+    \pagenumbering{Roman}
+    \begin{titlepage}
+    \thispagestyle{fancy}
+    %中文标题
+    \begin{center}
+    %论文题目用小三号黑体(中文)或者Times New Roman体(英文)
+    %分行用双反斜线表示
+    \zihao{-3}\CJKfamily{zhhei}\textbf{\bjfuTitleString}\\
 
-%作者及指导教师用小四号宋体
-%中文作者名，空格用单反斜线或者回车行表示
-\zihao{-4}\CJKfamily{zhsong}\bjfuClassString \ \bjfuAuthorString \\
-\zihao{-4}\CJKfamily{zhsong}指导老师\ \bjfuSupervisorString \\
+    %作者及指导教师用小四号宋体
+    %中文作者名，空格用单反斜线或者回车行表示
+    \zihao{-4}\CJKfamily{zhsong}\bjfuClassString \ \bjfuAuthorString \\
+    \zihao{-4}\CJKfamily{zhsong}指导老师\ \bjfuSupervisorString \\
 
-%“摘要”字样用四号宋体加粗居中
-\zihao{4}\CJKfamily{zhsong}\textbf{摘要}
+    %“摘要”字样用四号宋体加粗居中
+    \zihao{4}\CJKfamily{zhsong}\textbf{摘要}
 
-\end{center}
+    \end{center}
 
-%摘要正文用楷体五号
-\zihao{5}\CJKfamily{zhkai}\bjfuAbstractString \\\\
+    %摘要正文用楷体五号
+    \zihao{5}\CJKfamily{zhkai}\bjfuAbstractString \\\\
 
-%“关键词”字样后带冒号，中文关键词为五号宋体加粗
-\CTEXnoindent\zihao{5}\CJKfamily{zhsong}\textbf{关键词：\bjfuKeywordsString}
-\pagebreak
+    %“关键词”字样后带冒号，中文关键词为五号宋体加粗
+    \CTEXnoindent\zihao{5}\CJKfamily{zhsong}\textbf{关键词：\bjfuKeywordsString}
+    \pagebreak
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%英文题目用小三号Times New Roman体，其他要求同中文
-\begin{center}
-\zihao{-3}\textbf{\bjfuTitleEnString }\\
-\zihao{-4}\bjfuClassEnString\ \bjfuAuthorEnString \\
-\zihao{-4}Supervisor\ \bjfuSupervisorEnString \\
-\zihao{4}\textbf{Abstract}
-\end{center}
-%英文摘要正文
-\zihao{5} \bjfuAbstractEnString \\\\
-%英文关键词为五号Times New Roman体加粗
-\zihao{5}\textbf{Key Words: \bjfuKeywordsEnString}
-\end{titlepage}
-\pagebreak
-%自动生成目录页
-\setcounter{page}{3}
-\tableofcontents
-\pagebreak
-%自正文开始，使用阿拉伯数字且重新开始页码
-%论文页码的字号字体为小五号Times New Roman体，页码位于页面底端居中；
-\pagenumbering{arabic}
+    %英文题目用小三号Times New Roman体，其他要求同中文
+    \begin{center}
+    \zihao{-3}\textbf{\bjfuTitleEnString }\\
+    \zihao{-4}\bjfuClassEnString\ \bjfuAuthorEnString \\
+    \zihao{-4}Supervisor\ \bjfuSupervisorEnString \\
+    \zihao{4}\textbf{Abstract}
+    \end{center}
+    %英文摘要正文
+    \zihao{5} \bjfuAbstractEnString \\\\
+    %英文关键词为五号Times New Roman体加粗
+    \zihao{5}\textbf{Key Words: \bjfuKeywordsEnString}
+    \end{titlepage}
+    \pagebreak
+    %自动生成目录页
+    \setcounter{page}{3}
+    \tableofcontents
+    \pagebreak
+    %自正文开始，使用阿拉伯数字且重新开始页码
+    %论文页码的字号字体为小五号Times New Roman体，页码位于页面底端居中；
+    \pagenumbering{arabic}
 }
 
 \newcommand{\bjfubib}[1]{\newpage\addcontentsline{toc}{section}{参考文献}\zihao{-5}\bibliography{#1}}

@@ -8,7 +8,7 @@
 % 英语标题
 \bjfuTitleEn{An Bachelor Thesis Template of Beijing Forestry University}
 % 汉语作者
-\bjfuAuthor{作者}
+\bjfuAuthor{作者1}
 % 英语作者
 \bjfuAuthorEn{Author}
 % 汉语指导教师
@@ -55,9 +55,64 @@ In Beijing Forestry University, bachelor thesis have to meet some requirements. 
 
 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
 
+这是一个有序列表
+
+\begin{enumerate}[labelsep = .5em, leftmargin = 0pt, itemindent = 3em]
+    \item 这是一个行内公式 $y = ax^2+b$
+    
+    \item This is the second item %小标题
+    
+    % 段落内容
+    \setlength{\parindent}{2em}内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内这容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    \item This is the third item 
+    
+    % 子列表（不需要可删除）
+    \begin{enumerate}[itemindent=2em]
+        \item This is the first item
+        \item This is the second item
+        \item This is the third item
+    \end{enumerate}
+\end{enumerate}
+
+
+这是一个行内有序列表
+\begin{enumerate}[fullwidth,itemindent=2em]
+    \item This is the first item
+    \item This is the second item 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内这容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    
+    这是一个单行有编号公式
+    \begin{equation}
+    y=ax^2+b
+    \end{equation}
+    \item This is the third item 
+\end{enumerate}
+
 \subsubsection{快速快速开始}
 
 内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+\begin{equation}
+    y=vt^2
+\end{equation}
+
+
+这是一个无序列表
+\begin{itemize}
+    \item Fedora Versions
+    \begin{itemize}
+        \item Fedora 8
+        \item Fedora 9
+        \begin{itemize}
+            \item Werewolf
+            \item Sulphur
+            \begin{itemize}
+                \item 2007-05-31
+                \item 2008-05-13
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+    \item Fedora Spin
+    \item Fedora Silverblue
+\end{itemize}
 
 图片的插入方法的界如图\ref{Fig:test}所示
 \begin{figure}[htbp] %H为当前位置，!htb为忽略美学标准，htbp为浮动图形

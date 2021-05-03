@@ -54,5 +54,53 @@
 			"\t\\label{Fig:$5} %用于文内引用的标签",
 			"\\end{figure}"
 		]
-	}
+	},
+	"BjfuEquation": {
+		"scope": "latex",
+		"prefix": "equation-bjfu",
+		"description": "生成一个bjfu公式",
+		"body": [
+			"\\begin{equation}",
+			"\t$1",
+			"\\end{equation}"
+		]
+	},
+	"BjfuListInline": {
+		"scope": "latex",
+		"prefix": "list-inline-bjfu",
+		"description": "生成一个bjfu行内有序列表",
+		"body": [
+			"\\begin{enumerate}[fullwidth,itemindent=2em]",
+			"\t\\item $1",
+			"\\end{enumerate}"
+		]
+	},
+	"BjfuList": {
+		"scope": "latex",
+		"prefix": "list-bjfu",
+		"description": "生成一个bjfu有序列表",
+		"body": [
+			"\\begin{enumerate}[labelsep = .5em, leftmargin = 0pt, itemindent = 3em]",
+			"\t\\item $1 % 小标题",
+			"",
+			"\t% 段落内容",
+			"\t\\setlength{\\parindent}{2em}$2",
+			"",
+			"\t% 子列表（不需要可删除）"
+			"\t\\begin{enumerate}[itemindent=2em]",
+			"\t\t\\item $3",
+			"\t\\end{enumerate}",
+			"\\end{enumerate}"
+		]
+	},
+	"BjfuListUnordered": {
+		"scope": "latex",
+		"prefix": "unordered-list-bjfu",
+		"description": "生成一个bjfu无序列表",
+		"body": [
+			"\\begin{itemize}",
+			"\t\\item $1",
+			"\\end{itemize}"
+		]
+	},
 }
