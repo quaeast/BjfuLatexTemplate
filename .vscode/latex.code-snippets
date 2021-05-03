@@ -22,6 +22,7 @@
 		"body": [
 			"\\begin{table}[h] %table 里面也可以嵌套tabular,只有tabular是不能加标题的",
 			"\t\\bjfuTableCaption{$1}{$2}",
+			"\t\\footnotesize %设置为小五号字体",
 			"\t\\renewcommand\\arraystretch{1.5}",
 			"\t\\centering %表格居中",
 			"\t\\setlength{\\tabcolsep}{7mm}{",

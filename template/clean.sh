@@ -4,7 +4,7 @@ rm *.bbl
 rm *.blg
 rm *.log
 rm *.out
-rm *.pdf
+# rm *.pdf
 rm *.synctex.gz
 rm *.toc
 rm *.fls

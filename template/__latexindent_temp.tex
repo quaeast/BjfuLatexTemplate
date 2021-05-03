@@ -249,26 +249,64 @@ In Beijing Forestry University, bachelor thesis have to meet some requirements. 
     \item 这是一个列表项
     \item 公式插入
     \begin{itemize}
-        \item 这是行内公式（无编号）的写法$y=ax^2+b$
-        \item 这是普通公式（有编号）的写法，公式\ref{Equation:Test}如下：
-        \begin{equation}
-            y=vt^2
-            \label{Equation:Test}
-        \end{equation}
+        \item 这是一个行内公式$y=ax^2+b$
+        \item Fedora 9
+        \begin{itemize}
+            \item Werewolf
+            \item Sulphur
+            \begin{itemize}
+                \item 2007-05-31
+                \item 2008-05-13
+            \end{itemize}
+        \end{itemize}
     \end{itemize}
     
 \end{itemize}
 
-\subsection{插入代码}
 
-虽然论文规则不包含代码插入，但本模板提供相关功能的实现。
+\begin{enumerate}[labelsep = .5em, leftmargin = 0pt, itemindent = 3em]
+    \item 这是一个行内公式 $y = ax^2+b$
+    
+    \item This is the second item %小标题
+    
+    % 段落内容
+    \setlength{\parindent}{2em}内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内这容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+    \item This is the third item 
+    
+    % 子列表（不需要可删除）
+    \begin{enumerate}[itemindent=2em]
+        \item This is the first item
+        \item This is the second item
+        \item This is the third item
+    \end{enumerate}
+\end{enumerate}
+
+
+
+
+\subsubsection{这是三级标题}
+
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+\begin{equation}
+    y=vt^2
+\end{equation}
+
+
+
+
+内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+
+\subsection{代码}
+
 \begin{minted}[breaklines,baselinestretch=1]{python}
 if __name__ == '__main__':
     print('hello world')
 \end{minted}
 
-\subsection{插入图片}
-详见1.1.1
+\subsection{作者简介}
+\subsubsection{测试}
+内容
+
 
 % 致谢
 \bjfuThanks
