@@ -24,12 +24,9 @@ texcount *.tex
 
 `.vscode/latex.code-snippets`文件夹中包含了VsCode可读取的Code Snippets片段，可以使用快捷命令，快速生成例如图片/表格/列表等结构。
 
-## FAQ
-
 ## 作者列表与鸣谢
 
 1. 马起园先生作为ApTex的作者在2015年本模板的早期编写阶段给出了宝贵建议， 给予了极大的帮助。
-
 2. 王政先生维护了2015-2018年的LaTeX模板，其工作是本Repo的基础。
 
 ## License
