@@ -6,7 +6,6 @@ missfont.log
 *.blg
 *.log
 *.out
-*.pdf
 *.synctex.gz
 *.toc
 *.fls
