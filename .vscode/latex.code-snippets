@@ -86,7 +86,7 @@
 			"\t% 段落内容",
 			"\t\\setlength{\\parindent}{2em}$2",
 			"",
-			"\t% 子列表（不需要可删除）"
+			"\t% 子列表（不需要可删除）",
 			"\t\\begin{enumerate}[itemindent=2em]",
 			"\t\t\\item $3",
 			"\t\\end{enumerate}",
